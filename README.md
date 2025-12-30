@@ -32,3 +32,5 @@
   - Es muy parecido a Zod, pero está enfocado en ser más ligero y rápido.
 - Zod
   - **_npm i_**
+- Axios
+  - **_npm i axios_**
