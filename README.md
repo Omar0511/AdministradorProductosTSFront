@@ -28,3 +28,7 @@
     - Para ello deberás importar un componente llamado: **<Form>**, crear una función y en tu _router_ decirle que función debe ejecutarse en el _action_.
 - Valibot
   - **_npm i valibot_**
+  - Valibot en React sirve para validar datos de forma segura, rápida y con tipado fuerte en TypeScript, especialmente en formularios y datos que vienen de APIs.
+  - Es muy parecido a Zod, pero está enfocado en ser más ligero y rápido.
+- Zod
+  - **_npm i_**
