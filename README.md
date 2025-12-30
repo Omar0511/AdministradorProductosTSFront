@@ -18,4 +18,9 @@
       plugins: [react(), tailwindcss()],
     })
   ```
-- 
+- React Router
+  - **_npm i react-router-dom_**
+  - Desde la versión: **6.4** de _React Router_ agregar un nuevo _router_ que te permite utilizar lo que se conoce como: _Data API'S_.
+  - Estas _API'S_ te permiten obtener datos de una _API_ de forma muy eficiente.
+  - También te permiten manejar entrada de datos desde un formulario.
+  
