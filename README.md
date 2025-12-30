@@ -26,4 +26,5 @@
   - ## ACTIONS
     - Utiliza _Actions_ para procesar la entrada de datos en un formulario.
     - Para ello deberás importar un componente llamado: **<Form>**, crear una función y en tu _router_ decirle que función debe ejecutarse en el _action_.
-    
+- Valibot
+  - **_npm i valibot_**
