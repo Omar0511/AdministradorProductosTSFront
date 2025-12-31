@@ -1,4 +1,16 @@
 import { Link } from "react-router-dom";
+import { getProducts } from "../services/ProductService";
+
+export async function loader() {
+  // console.log('loader');
+
+  const products = await getProducts();
+  console.log(products);
+
+  return {
+
+  };
+};
 
 export default function Products() {
   return (
@@ -15,4 +27,4 @@ export default function Products() {
       </div>
     </>
   );
-}
+};

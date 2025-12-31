@@ -34,6 +34,10 @@
   - **_npm i_**
 - Axios
   - **_npm i axios_**
+- Loaders - React Router
+  - Utiliza _Loaders_ para obtener datos de una _API_, similar a _useEffect_ y colocar la respuesta en un _State_.
+  - Para ello deberás crear una función y en tu _router_ decirle que función debe ejecutarse en el _loader_.
+  
 
 ### CORS
 
