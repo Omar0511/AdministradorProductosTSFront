@@ -55,3 +55,8 @@
   - **Interoperabilidad**
     - _CORS_ facilita el intercambio de datos y recursos entre diferentes dominios.
     - Estos es particularmente útil en situaciones en las que una págnia _web_ necesita cargar recursos de múltiples dominios para funcionar correctamente, como los casos de uso de _API_ o la carga de fuentes externas.
+
+## USELOADERDATA - USE ACTIONDATA
+
+- _useLoaderData_ usarlo cuando quieres obtener el resultado de un _loader_.
+- _useActionData_ cuando quieras obtener el resultado de un _action_.
