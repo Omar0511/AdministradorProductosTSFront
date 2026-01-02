@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import type { Product } from "../types";
 import { formatCurrency } from "../utils";
 
@@ -7,6 +7,8 @@ type ProductDetailsProps = {
 };
 
 export default function ProductDetails({ product }: ProductDetailsProps) {
+  const navigate = useNavigate();
+
   return (
     <tr className="border-b ">
       <td className="p-3 text-lg text-gray-800">{product.name}</td>
@@ -21,14 +23,20 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
 
       <td className="p-3 text-lg text-gray-800 ">
         <div className="flex  gap-2 items-center">
-          {/* <button>Editar</button> */}
-          <Link
+          <button
+            className="bg-indigo-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center"
+            onClick={() => navigate(`/productos/${product.id}/editar`)}
+          >
+            Editar
+          </button>
+
+          {/* <Link
             // ubicación
             to={`/productos/${product.id}/editar`}
             className="bg-indigo-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center"
           >
             Editar
-          </Link>
+          </Link> */}
 
           {/* <button>Eliminar</button> */}
 
