@@ -8,6 +8,7 @@ import {
 } from "../types";
 import axios from "axios";
 import { toBoolean } from "../utils";
+import { deleteProduct } from '../../../server/src/handlers/product';
 
 type ProductData = {
   [k: string]: FormDataEntryValue;
@@ -99,6 +100,19 @@ export async function updateProduct(data : ProductData, id : Product['id']) {
 
       await axios.put(url, result.output);
     }
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export async function deleteProduct(id: Product['id']) {
+  // console.log(id);
+  // console.log("ID crudo:", id, typeof id);
+
+  try {
+    const url = `${import.meta.env.VITE_API_URL}/api/products/${id}`;
+    await axios.delete(url);
 
   } catch (error) {
     console.log(error);
