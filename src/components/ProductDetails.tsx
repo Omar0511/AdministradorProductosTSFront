@@ -1,9 +1,21 @@
-import { Link, useNavigate } from "react-router-dom";
+import {
+  Form,
+  Link,
+  useNavigate,
+  redirect,
+  type ActionFunctionArgs,
+} from "react-router-dom";
 import type { Product } from "../types";
 import { formatCurrency } from "../utils";
 
 type ProductDetailsProps = {
   product: Product;
+};
+
+export async function action({ params }: ActionFunctionArgs) {
+  console.log('DEsde actions product details', params.id);
+
+  return redirect('/');
 };
 
 export default function ProductDetails({ product }: ProductDetailsProps) {
@@ -24,7 +36,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
       <td className="p-3 text-lg text-gray-800 ">
         <div className="flex  gap-2 items-center">
           <button
-            className="bg-indigo-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center"
+            className="bg-indigo-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center hover:cursor-pointer"
             // onClick={() => navigate(`/productos/${product.id}/editar`, {
             //   state: {
             //     product
@@ -45,11 +57,23 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
 
           {/* <button>Eliminar</button> */}
 
-          <Link className="bg-red-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center">
+          {/* <Link className="bg-red-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center">
             Eliminar
-          </Link>
+          </Link> */}
+
+          <Form
+            className="w-full"
+            method="POST"
+            action={`productos/:${product.id}/eliminar`}
+          >
+            <input
+              type="submit"
+              value="Eliminar"
+              className="bg-red-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center hover:cursor-pointer"
+            />
+          </Form>
         </div>
       </td>
     </tr>
   );
-}
+};
