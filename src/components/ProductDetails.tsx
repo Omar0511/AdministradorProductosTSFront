@@ -52,14 +52,18 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         <fetcher.Form method="POST">
           <button
             type="submit"
-            name="availability"
-            value={product.availability.toString()}
-            className={`${isAvailable ? 'text-black' : 'text-red-600'} rounded-lg p-2 text-xs uppercase font-bold w-full border border-blue-100 hover:cursor-pointer`}
+            // name="availability"
+            name="id"
+            // value={product.availability.toString()}
+            value={product.id}
+            className={`${
+              isAvailable ? "text-black" : "text-red-600"
+            } rounded-lg p-2 text-xs uppercase font-bold w-full border border-blue-100 hover:cursor-pointer`}
           >
             {product.availability ? "Disponible" : "No Disponible"}
           </button>
 
-          <input type="hidden" name="id" value={product.id} />
+
         </fetcher.Form>
 
         {/* {product.availability ? "Disponible" : "No Disponible"} */}
